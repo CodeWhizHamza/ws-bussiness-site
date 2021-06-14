@@ -6,8 +6,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Innomerce - Home</title>
 
-    <link rel="preload" href="/css/style.css" as="style" />
+    <!-- Vendors -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Oswald:wght@200;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="https://kit.fontawesome.com/a4eb31c874.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- user defined -->
+    <link rel="preload" href="/css/style.css" as="style" type="text/css" />
     <script defer src="/js/app.js"></script>
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
   </head>
-  <body></body>
+  <body>
+    <nav class="nav">
+      <img
+        src="https://ld-wp73.template-help.com/wordpress/prod_24024/v1/wp-content/uploads/2019/06/logo.svg"
+        alt="LOGO"
+        class="nav__img"
+      />
+
+      <div class="nav__toggler">
+        <span class="fas fa-bars"></span>
+      </div>
+
+      <div class="nav__overlay"></div>
+
+      <ul class="nav__links">
+        <button class="nav__link nav__link--close">
+          <span class="fas fa-times"></span>
+        </button>
+        <a href="#" class="nav__link nav__link--active">Home</a>
+        <a href="#" class="nav__link">About Us</a>
+        <a href="#" class="nav__link">Services</a>
+        <a href="#" class="nav__link">Projects</a>
+        <a href="#" class="nav__link">News</a>
+        <a href="#" class="nav__link">Contact Us</a>
+      </ul>
+    </nav>
+    <section class="home swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slide">
+          <img
+            src="https://ld-wp73.template-help.com/wordpress/prod_24024/v1/wp-content/uploads/2019/05/bg-slider.jpg"
+            alt=""
+            class="slide__img"
+          />
+          <h3 class="slide__subtitle">Impress your client</h3>
+          <h2 class="slide__title">Create something unique</h2>
+          <p class="slide__text">
+            We are ready to provide you with any financial, legal and auditing
+            help as well as prepare a business plan, marketing or anti-crisis
+            strategy and help with its implementation to your business.
+          </p>
+        </div>
+        <div class="swiper-slide slide">
+          <img
+            src="https://ld-wp73.template-help.com/wordpress/prod_24024/v1/wp-content/uploads/2019/07/slider-2.jpg"
+            alt=""
+            class="slide__img"
+          />
+          <h3 class="slide__subtitle">Impress your client</h3>
+          <h2 class="slide__title">Create something unique</h2>
+          <p class="slide__text">
+            We are ready to provide you with any financial, legal and auditing
+            help as well as prepare a business plan, marketing or anti-crisis
+            strategy and help with its implementation to your business.
+          </p>
+        </div>
+        <div class="swiper-slide slide">
+          <img
+            src="https://ld-wp73.template-help.com/wordpress/prod_24024/v1/wp-content/uploads/2019/07/slider-3.jpg"
+            alt=""
+            class="slide__img"
+          />
+          <h3 class="slide__subtitle">Impress your client</h3>
+          <h2 class="slide__title">Create something unique</h2>
+          <p class="slide__text">
+            We are ready to provide you with any financial, legal and auditing
+            help as well as prepare a business plan, marketing or anti-crisis
+            strategy and help with its implementation to your business.
+          </p>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </section>
+  </body>
 </html>
