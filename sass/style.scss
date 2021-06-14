@@ -207,3 +207,52 @@ body {
     padding: 10rem 2rem 0;
   }
 }
+.welcome {
+  padding: 6rem 16rem;
+  line-height: 2;
+
+  &__subtitle,
+  &__title {
+    font-family: $font-display;
+    font-weight: 200;
+    font-size: 3rem;
+    letter-spacing: 1.4rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  &__title {
+    font-size: 5rem;
+    letter-spacing: 0.4rem;
+    font-weight: 300;
+  }
+  &__content {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > * {
+      flex: 0 0 48%;
+    }
+  }
+  &__left,
+  &__right {
+    color: $c-grey;
+
+    p:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+  @include media(tab-port) {
+    padding: 6rem 10rem;
+  }
+  @include media(phone) {
+    padding: 6rem;
+
+    &__content > * {
+      flex: 0 0 100%;
+      margin-bottom: 2rem;
+    }
+  }
+}
