@@ -542,3 +542,33 @@ body {
     }
   }
 }
+.footer {
+  display: flex;
+  padding: 3rem;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+  border-top: 1px solid rgba($c-grey, 0.5);
+
+  &__copyright {
+    font-size: 1.6rem;
+    color: $c-grey;
+  }
+  &__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    gap: 1rem;
+  }
+  &__link {
+    color: $c-grey;
+    transition: color 0.3s ease;
+    text-decoration: none;
+
+    &:hover {
+      color: $c-black;
+    }
+  }
+}
