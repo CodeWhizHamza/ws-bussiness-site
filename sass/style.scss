@@ -275,6 +275,9 @@ body {
     display: flex;
     padding: 0 6rem;
   }
+  .stat {
+    margin-right: 4rem;
+  }
   @include media(phone) {
     flex-wrap: wrap;
     padding: 5rem 1rem;
@@ -297,6 +300,108 @@ body {
     }
   }
 }
-.stat {
-  margin-right: 4rem;
+.services {
+  padding: 6rem 2rem;
+
+  .title {
+    margin-bottom: 4rem;
+  }
+
+  &__services {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(38rem, 1fr));
+
+    @include media(phone) {
+      padding: 0;
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    }
+  }
+  @include media(phone) {
+    padding: 6rem 0.5rem;
+  }
+}
+.service {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 4rem;
+  margin-bottom: 3rem;
+  border-radius: 0.5rem;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 0 4rem rgba(#555, 0.2), 0 0 0.1rem rgba(#555, 0.2);
+  }
+
+  &__img {
+    margin-bottom: 3rem;
+  }
+  &__title {
+    color: $c-black;
+    margin-bottom: 1.5rem;
+    font-weight: normal;
+    font-family: $font-display;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+  }
+  &__text {
+    color: $c-grey;
+    line-height: 2;
+    letter-spacing: 1px;
+    max-width: 32ch;
+    margin: auto;
+  }
+  @include media(phone) {
+    padding: 2rem;
+  }
+}
+.stats {
+  width: 100%;
+  padding: 16rem 0;
+  background-color: #333;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(#000, 0.6),
+      rgba(#000, 0.6)
+    ),
+    url(https://ld-wp73.template-help.com/wordpress/prod_24024/v1/wp-content/uploads/2019/05/image.jpg);
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @include media(phone) {
+    flex-direction: column;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem;
+    color: $c-white;
+
+    &__img {
+      margin-bottom: 3rem;
+    }
+    &__title {
+      margin-bottom: 0.5rem;
+      font-weight: 300;
+      font-family: $font-display;
+      font-size: 3rem;
+      letter-spacing: 2px;
+    }
+    &__text {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  }
 }
