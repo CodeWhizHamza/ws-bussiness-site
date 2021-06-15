@@ -19,13 +19,27 @@ btnToggler.addEventListener("click", openNav);
 );
 
 // HOME swiper
-const swiper = new Swiper(".home.swiper-container", {
+const swiperHome = new Swiper(".home.swiper-container", {
   grabCursor: true,
   autoplay: {
     delay: 5000,
     disableOnInteraction: false,
   },
   loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+// REVIEWS swiper
+const swiperReviews = new Swiper(".reviews.swiper-container", {
+  grabCursor: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  effect: "cube",
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
