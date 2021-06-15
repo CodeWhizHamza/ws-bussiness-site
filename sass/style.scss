@@ -45,6 +45,30 @@ body {
 }
 
 // Components
+.subtitle,
+.title {
+  font-family: $font-display;
+  font-weight: 200;
+  font-size: 2rem;
+  letter-spacing: 1.4rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.title {
+  font-size: 3.6rem;
+  letter-spacing: 0.4rem;
+  font-weight: 300;
+}
+@include media(tab-port) {
+  .subtitle {
+    font-size: 1.6rem;
+  }
+  .title {
+    font-size: 3rem;
+  }
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -116,12 +140,14 @@ body {
     &.active {
       .nav__overlay {
         display: block;
+        z-index: 20;
       }
       .nav__links {
         transform: translateX(0);
       }
     }
     &__links {
+      z-index: 20;
       position: fixed;
       top: 0;
       right: 0;
@@ -172,36 +198,15 @@ body {
     position: relative;
     z-index: 4;
   }
-  &__subtitle,
   &__title {
-    font-family: $font-display;
-    font-weight: 200;
-    font-size: 3rem;
-    letter-spacing: 1.4rem;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  &__title {
-    font-size: 5rem;
-    letter-spacing: 0.4rem;
     max-width: 20ch;
-    font-weight: 300;
+    font-size: 5rem;
   }
   &__text {
     max-width: 75ch;
     text-align: center;
     line-height: 2.4;
     color: $c-grey;
-  }
-
-  @include media(tab-port) {
-    &__subtitle {
-      font-size: 2rem;
-    }
-    &__title {
-      font-size: 4rem;
-    }
   }
   @include media(phone) {
     padding: 10rem 2rem 0;
@@ -210,22 +215,6 @@ body {
 .welcome {
   padding: 6rem 16rem;
   line-height: 2;
-
-  &__subtitle,
-  &__title {
-    font-family: $font-display;
-    font-weight: 200;
-    font-size: 3rem;
-    letter-spacing: 1.4rem;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  &__title {
-    font-size: 5rem;
-    letter-spacing: 0.4rem;
-    font-weight: 300;
-  }
   &__content {
     flex-wrap: wrap;
     display: flex;
@@ -255,4 +244,59 @@ body {
       margin-bottom: 2rem;
     }
   }
+}
+.about-us {
+  padding: 5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+
+  .title,
+  .subtitle {
+    text-align: left;
+  }
+
+  & > * {
+    flex: 0 0 48%;
+  }
+
+  &__left {
+    width: 100%;
+  }
+  &__img {
+    width: 100%;
+  }
+  &__text {
+    padding: 6rem;
+    max-width: 40ch;
+    line-height: 2;
+    letter-spacing: 1px;
+  }
+  &__stats {
+    display: flex;
+    padding: 0 6rem;
+  }
+  @include media(phone) {
+    flex-wrap: wrap;
+    padding: 5rem 1rem;
+
+    & > * {
+      flex: 0 0 100%;
+    }
+    .title,
+    .subtitle,
+    &__text {
+      text-align: center;
+      margin: auto;
+    }
+    .subtitle {
+      margin-top: 3rem;
+    }
+    &__stats {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+.stat {
+  margin-right: 4rem;
 }
