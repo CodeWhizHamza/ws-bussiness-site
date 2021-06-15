@@ -45,3 +45,6 @@ const swiperReviews = new Swiper(".reviews.swiper-container", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+// Initialize AOS
+AOS.init();
